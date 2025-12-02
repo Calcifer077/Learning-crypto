@@ -128,3 +128,19 @@ HMAC combines a cryptographic hash function (like SHA-256) with a **secret key**
     - If the comparison is true, the message is authenticated and has not been tampered with.
 
 ---
+
+### **Security Best Practices**
+When using the Crypto module, keep these best practices in mind:
+
+1. **Use modern algorithms:** Avoid MD5, SHA-1, and other outdated algorithms
+2. **Secure key management:** Store keys securely, rotate them regularly, and never hardcode them
+3. **Use random IVs:** Generate a new random IV for each encryption operation
+4. **Add authentication:** Use authenticated encryption modes like GCM when possible
+5. **Constant-time comparisons:** Always use crypto.timingSafeEqual() for comparing security-critical values
+6. **Key derivation:** Use appropriate key derivation functions like scrypt, bcrypt, or PBKDF2 for password-based keys
+7. **Stay updated:** Keep Node.js updated to get security fixes and support for newer algorithms
+8. **Follow standards:** Adhere to established cryptographic standards and protocols
+
+---
+
+References: https://www.w3schools.com/nodejs/nodejs_crypto.asp and gemini
